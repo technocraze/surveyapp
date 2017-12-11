@@ -1,0 +1,44 @@
+
+
+<ion-view view-title="Login"  ng-init="app.init_login()">
+
+  <ion-content>
+
+   <div class="card">
+    <div class="item item-text-wrap">
+      <h2 >It seems you are using this app for the first time.  If already registered, please login with your mobile no and password.  Else, click on Register button</h2>
+
+    </div>
+  </div>
+
+
+
+  <div class="list" style="border:0px solid lightgray" id="login">
+    <div class=" item item-input-inset">
+
+       <label class="item-input-wrapper col-20" style="padding:0px;margin-right:0px;" >
+         <input type="text" class="rounded" style="width:100%;text-align:right;;margin-left:0px;"  ng-model="smsauth.mobile_country"  >
+
+       </label>
+        --
+       <label class="item-input-wrapper" style="padding:0px;margin-right:10px;" >
+       <input type="text" style="width:100%;margin:0px;" class="rounded" ng-model="smsauth.mobile_number" >
+       </label>
+
+
+  </div>
+
+  <div class="row col">
+
+  <label class="item">
+    <button class="button button-block button-balanced " ng-disabled="app.showloading"   type="submit" ng-click="app.phone()" >Authenticate<ion-spinner ng-show="app.showloading"  icon="circles" class="spinner-dark"></ion-spinner></button>
+
+  </label>
+</div>
+
+</div>
+<div id="sign-in-button" style="visibility: hidden">sdfs</div>
+
+
+</ion-content>
+</ion-view>

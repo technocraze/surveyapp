@@ -1,0 +1,12 @@
+<ion-view view-title="View Orders">
+  <ion-content>
+    <h4 class="cart empty" ng-show="cart.products.length === 0">{{::cart.messages.empty_cart}}</h4>
+    <ion-list>
+      <ion-item class="item  item-remove-animate item-icon-right " ng-repeat="o in orders.orders_list track by $index" type="item-text-wrap" ui-sref="app.order-details({slug: $index})">
+        <span class="cart-item-text">{{"order# " + ($index+1)}}</span>
+		<i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  
+</ion-view>

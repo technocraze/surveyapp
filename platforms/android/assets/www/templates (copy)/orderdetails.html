@@ -1,0 +1,66 @@
+<ion-view view-title="Order Details">
+  <ion-nav-buttons side="primary">
+    
+  </ion-nav-buttons>
+  <ion-content class="">
+  <div class="list">
+
+  <div class="item item-divider">
+    Order Info
+  </div>
+
+  <div class="item row" >
+    <div class="col-33" style="text-align:right;padding:5px;">Order #</div><div class="col-30" style="padding:5px"> : {{orders.order_id}}</div>
+  </div>
+<div class="item row" >
+    <div class="col-33" style="text-align:right;padding:5px;">Order Date</div><div class="col-30" style="padding:5px"> :</div>
+  </div>
+<div class="item row" >
+    <div class="col-33" style="text-align:right;padding:5px;">Order Status</div><div class="col-30" style="padding:5px"> : </div>
+  </div>  
+  <div class="item item-divider">
+    Order Items
+  </div>
+<ul class="card">
+<li class="item">
+<div class="row">
+
+
+
+<div class="col" style="text-align:right;padding-right:40px">Total: Rs. {{orders.cur_order.total}} </div>
+
+</div>
+
+
+</li>
+<li class="item" style="background:gray; color:white" >
+<div class="row" >
+<div class="col-60">Item Name</div>
+
+
+<div class="col-20">Qty</div>
+
+<div class="col-20">Amt</div>
+
+</div>
+
+</li>
+<li class="item" style="" ng-repeat="item in orders.cur_order.items">
+<div class="row" >
+<div class="col-60">{{item.name}}</div>
+
+
+<div class="col-20">{{item.qty}}</div>
+
+<div class="col-20">{{item.amount}}</div>
+
+</div>
+
+</li>
+
+
+</ul>
+</div>
+  </ion-content>
+  
+</ion-view>

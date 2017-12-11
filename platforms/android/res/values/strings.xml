@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Team Gopals</string>
+    <string name="launcher_name">@string/app_name</string>
+    <string name="activity_name">@string/launcher_name</string>
+    
+    <string name="google_app_id">1:1073567934869:android:b1bbaad44108816e</string>
+    <string name="google_api_key">AIzaSyBtqL8BguoRCbO6eTtyDG_z5iLKzGQpdwg</string>
+</resources>

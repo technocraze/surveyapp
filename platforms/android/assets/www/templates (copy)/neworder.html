@@ -1,0 +1,66 @@
+<ion-view  view-title="{{cart.title}}">
+  <div class="bar bar-subheader" style="height:100px;margin-bottom:100px;">
+  
+  <ul style="width:100%" class="" >
+<li class="row" style="padding:10px  0px">
+
+	<select ng-model="cart.item_to_add" style="height:35px;background:#e9eded;border-radius:7px;width:100%;">
+      <option ng-repeat="p in cart.products track by $index" value={{$index}}>{{p.name}}</option>
+      
+    </select>  
+
+</li> 
+<li class="row">
+	
+	<div class="col-20">
+	
+	<input ng-model="cart.item_qty" style="border:1px solid #9dadae;background:#f7f9f7;width:50px;padding:5px 10px 5px 10px;;border-radius:5px;" placeholder="Qty" type="text" name="qty">
+	
+	</div>
+	<div class="col-50">
+	<h4>Total: {{ cart.getTotal()}}</h4>
+	</div>
+	<div class="col-30">
+	<button class="button button-balanced  " ng-click="cart.addToCart()"><i class="icon ion-android-add-circle" ></i> Add</button>
+	</div>
+ </li>
+ </ul>
+</div>
+  <ion-content class="has-subheader">
+   
+   
+   
+   <ion-list show-delete="true" >
+  <ion-item  class="item-button-right">
+     
+    <div class="row " style="height:25px;">
+	
+	</div>
+  </ion-item>
+  <ion-item class="item-button-right" ng-repeat="c in cart.cart">
+    <ion-delete-button class="ion-close-circled"></ion-delete-button>
+    <div class="row " style="">
+	<div class="" style="width:85%;">
+	<h2>{{c.name}}</h2>
+	<p>Rate: Rs.{{c.rate}} x Qty: {{c.qty}}</p>
+	</div>
+	<div class="" style="width:15%;">
+	{{c.amount}}</div>
+	</div>
+	</ion-item>
+	
+  
+</ion-list>
+   
+   
+  </ion-content>
+  <ion-footer-bar align-title="left" class="bar-stable">
+  <div class="buttons">
+    <a ui-sref="app.home"><button class="button button-positive">Cancel</button></a>
+  </div>
+  <h1 class="title"></h1>
+  <div class="buttons" ng-click="doSomething()">
+<a ui-sref="app.confirmorder">    <button class="button">Confirm Order</button></a>
+  </div>
+</ion-footer-bar>
+</ion-view>

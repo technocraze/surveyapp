@@ -1,0 +1,36 @@
+<ion-view view-title="Register" >
+  
+  <ion-content>
+  
+     
+	  <form ng-submit="doRegister()">
+      <div class="list" style="border:0px solid lightgray" id="login">
+	  
+		<label class="item item-input">
+          <span class="input-label">Name</span>
+          <input type="text" style="" ng-model="registerData.name">
+        </label>
+		<label class="item item-input">
+          <span class="input-label">Mobile No</span>
+          <input type="text" style="" ng-model="registerData.mobile">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Email</span>
+          <input type="text" style="" ng-model="registerData.email">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" class="rounded" ng-model="registerData.password">
+        </label>
+        <label class="item">
+          <button class="button button-block button-balanced" type="submit">Register</button>
+        </label>
+      </div>
+    </form>
+	 <label class="item">
+          <a ui-sref="login" > <button class="button button-block button-positive" type="submit">Login</button></a>
+        </label>
+	  
+	
+  </ion-content>
+</ion-view>

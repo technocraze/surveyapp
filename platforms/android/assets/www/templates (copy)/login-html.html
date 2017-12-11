@@ -1,0 +1,60 @@
+
+<ion-view view-title="Login" ng-init="app.init_login()">
+  
+  <ion-content>
+  
+     <div class="card">
+  <div class="item item-text-wrap">
+<h2 >It seems you are using this app for the first time.  If already registered, please login with your mobile no and password.  Else, click on Register button</h2>
+  
+  </div>
+</div>
+	  <form ng-submit="doLogin()">
+      <div class="list" style="border:0px solid lightgray" id="login">
+		
+        <label class="item item-input">
+          <span class="input-label">Mobile No</span>
+          <input type="text" style="" ng-model="loginData.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" class="rounded" ng-model="loginData.password">
+        </label>
+        <label class="item">
+          <button class="button button-block button-balanced"  type="submit">Log in</button>
+        </label>
+      </div>
+    </form>
+
+
+      <div class="list" style="border:0px solid lightgray" id="login">
+
+		<div class="row">
+			<div class="col-33">
+				 <label class="item item-input">
+			  <input type="text" class="rounded" style="text-align:right;;border:1px solid red;margin-left:10px;" size="4" ng-model="smsauth.mobile_country"  >
+			          </label>
+			  </div>
+		
+			<div class="col-60">
+				 <label class="item item-input">
+		          <input type="text" style="" class="rounded" ng-model="smsauth.mobile_number" >
+		                  </label>
+		          </div>
+	        </div>
+
+        <label class="item">
+          <button class="button button-block button-balanced" id="sign-in-button"  type="submit" ng-click="app.phoneVerify()">Authenticate</button>
+        </label>		
+     
+</div>
+	
+	  <div class="list" >
+	  
+	    <label class="item">
+          <a ui-sref="register"> <button class="button button-block button-positive"  >Register</button></a>
+        </label>
+      </div>
+	
+  </ion-content>
+</ion-view>
